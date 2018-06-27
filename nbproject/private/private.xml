@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/fot/resources/views/layouts/app.blade.php</file>
-            <file>file:/C:/xampp/htdocs/fot/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/fot/database/migrations/2018_06_24_161103_create_images_table.php</file>
-            <file>file:/C:/xampp/htdocs/fot/app/Providers/AppServiceProvider.php</file>
-            <file>file:/C:/xampp/htdocs/fot/resources/views/pages/upload.blade.php</file>
-            <file>file:/C:/xampp/htdocs/fot/app/Http/Controllers/ImageController.php</file>
-            <file>file:/C:/xampp/htdocs/fot/.env</file>
+            <file>file:/C:/xampp/htdocs/foter/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/xampp/htdocs/foter/app/Logic/Image/ImageRepository.php</file>
+            <file>file:/C:/xampp/htdocs/foter/app/Http/Controllers/ImageController.php</file>
+            <file>file:/C:/xampp/htdocs/foter/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/foter/resources/views/pages/upload.blade.php</file>
+            <file>file:/C:/xampp/htdocs/foter/config/app.php</file>
         </group>
     </open-files>
 </project-private>

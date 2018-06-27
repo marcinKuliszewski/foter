@@ -52,7 +52,8 @@ class ImageRepository
         $sessionImage = new Image;
         $sessionImage->filename      = $allowed_filename;
         $sessionImage->original_name = $originalName;
-        $sessionImage->oferta_id = $form_data['oferta_id'];
+        //$sessionImage->oferta_id = $form_data['oferta_id'];
+        $sessionImage->oferta_id = $oferta_id;
         $sessionImage->save();
 
         return Response::json([
