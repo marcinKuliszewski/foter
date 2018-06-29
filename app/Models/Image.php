@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     public static $rules = [
-        'file' => 'required|mimes:png,gif,jpeg,jpg,bmp'
+        'file' => 'required|mimes:png,gif,jpeg,jpg,bmp,pdf,doc,docs,otd,odt'
     ];
 
     public static $messages = [

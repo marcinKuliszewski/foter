@@ -37,9 +37,9 @@ class ImageRepository
 
         $uploadSuccess1 = $this->original( $photo, $allowed_filename );
 
-        $uploadSuccess2 = $this->icon( $photo, $allowed_filename );
+       // $uploadSuccess2 = $this->icon( $photo, $allowed_filename );
 
-        if( !$uploadSuccess1 || !$uploadSuccess2 ) {
+        if( !$uploadSuccess1 ) {
 
             return Response::json([
                 'error' => true,
@@ -84,8 +84,8 @@ class ImageRepository
      */
     public function original( $photo, $filename )
     {
-        $manager = new ImageManager();
-        $image = $manager->make( $photo )->save('images/full_sizee/' . $filename );
+        //$manager = new ImageManager();
+        $image =  $photo ->move('images/full_sizee/', $filename );
 
         return $image;
     }
@@ -93,17 +93,18 @@ class ImageRepository
     /**
      * Create Icon From Original
      */
+    /*
     public function icon( $photo, $filename )
     {
         $manager = new ImageManager();
-        $image = $manager->make( $photo )->resize(200, null, function ($constraint) {
+        $image = $manager->make( $photo )->resize(600, null, function ($constraint) {
             $constraint->aspectRatio();
             })
             ->save( 'images/icon_sizee/'  . $filename );
 
         return $image;
     }
-
+*/
     /**
      * Delete Image From Session folder, based on server created filename
      */
@@ -126,17 +127,17 @@ class ImageRepository
         }
 
         $full_path1 = $full_size_dir . $sessionImage->filename;
-        $full_path2 = $icon_size_dir . $sessionImage->filename;
+       // $full_path2 = $icon_size_dir . $sessionImage->filename;
 
         if ( File::exists( $full_path1 ) )
         {
             File::delete( $full_path1 );
         }
 
-        if ( File::exists( $full_path2 ) )
-        {
-            File::delete( $full_path2 );
-        }
+       // if ( File::exists( $full_path2 ) )
+       // {
+       //     File::delete( $full_path2 );
+      //  }
 
         if( !empty($sessionImage))
         {
